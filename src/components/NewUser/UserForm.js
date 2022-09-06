@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styles from "./UserForm.module.css";
 import Card from "../UI/Card";
+import Button from "../UI/Button";
 
 const UserForm = (props) => {
   const [userName, setUserName] = useState("");
@@ -55,9 +56,7 @@ const UserForm = (props) => {
             onChange={ageChangeHandler}
           ></input>
         </div>
-        <button className={styles.button} type="submit">
-          Add User
-        </button>
+        <Button type="submit">Add User</Button>
       </form>
     </Card>
   );
