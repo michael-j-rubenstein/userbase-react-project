@@ -36,16 +36,18 @@ const UserForm = (props) => {
   return (
     <form className={styles.inputs} onSubmit={submitHandler}>
       <div className={styles["input-group"]}>
-        <label>Username</label>
+        <label htmlFor="username">Username</label>
         <input
+          id="username"
           type="text"
           value={userName}
           onChange={nameChangeHandler}
         ></input>
       </div>
       <div className={styles["input-group"]}>
-        <label>Age (years)</label>
+        <label htmlFor="age">Age (years)</label>
         <input
+          id="age"
           type="number"
           value={userAge}
           onChange={ageChangeHandler}
