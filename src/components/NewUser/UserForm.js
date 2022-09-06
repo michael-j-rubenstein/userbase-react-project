@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styles from "./UserForm.module.css";
+import Card from "../UI/Card";
 
 const UserForm = (props) => {
   const [userName, setUserName] = useState("");
@@ -34,29 +35,31 @@ const UserForm = (props) => {
   };
 
   return (
-    <form className={styles.inputs} onSubmit={submitHandler}>
-      <div className={styles["input-group"]}>
-        <label htmlFor="username">Username</label>
-        <input
-          id="username"
-          type="text"
-          value={userName}
-          onChange={nameChangeHandler}
-        ></input>
-      </div>
-      <div className={styles["input-group"]}>
-        <label htmlFor="age">Age (years)</label>
-        <input
-          id="age"
-          type="number"
-          value={userAge}
-          onChange={ageChangeHandler}
-        ></input>
-      </div>
-      <button className={styles.button} type="submit">
-        Add User
-      </button>
-    </form>
+    <Card>
+      <form onSubmit={submitHandler}>
+        <div className={styles["input-group"]}>
+          <label htmlFor="username">Username</label>
+          <input
+            id="username"
+            type="text"
+            value={userName}
+            onChange={nameChangeHandler}
+          ></input>
+        </div>
+        <div className={styles["input-group"]}>
+          <label htmlFor="age">Age (years)</label>
+          <input
+            id="age"
+            type="number"
+            value={userAge}
+            onChange={ageChangeHandler}
+          ></input>
+        </div>
+        <button className={styles.button} type="submit">
+          Add User
+        </button>
+      </form>
+    </Card>
   );
 };
 
