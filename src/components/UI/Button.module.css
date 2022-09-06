@@ -9,7 +9,6 @@
 
 .button:hover {
     cursor: pointer;
-    border: none;
-    box-shadow: 0 0 5px 2px #ccc;
+    box-shadow: 0 0 2px 1px #ccc;
     background-color: #eee;
 }
