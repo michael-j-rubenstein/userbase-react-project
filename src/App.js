@@ -17,10 +17,10 @@ function App() {
     console.log(userData);
   };
   return (
-    <div>
+    <>
       <UserForm onAddUser={newUserHandler} />
       <UserList data={userData} />
-    </div>
+    </>
   );
 }
 
