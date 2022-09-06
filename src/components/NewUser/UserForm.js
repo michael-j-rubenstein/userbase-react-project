@@ -70,6 +70,7 @@ const UserForm = (props) => {
               type="text"
               value={userName}
               onChange={nameChangeHandler}
+              autoComplete="off"
             ></input>
           </div>
           <div className={styles["input-group"]}>
