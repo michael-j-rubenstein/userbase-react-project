@@ -10,11 +10,9 @@ const dummyUserData = [
 function App() {
   const [userData, setUserData] = useState(dummyUserData);
   const newUserHandler = (newUserData) => {
-    console.log(newUserData);
     setUserData((prevUserData) => {
       return [newUserData, ...prevUserData];
     });
-    console.log(userData);
   };
   return (
     <>
