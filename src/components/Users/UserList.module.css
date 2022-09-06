@@ -2,4 +2,5 @@
 .user-list {
     padding: 1rem;
     border-radius: 12px;
+    list-style: none;
 }

@@ -17,9 +17,9 @@ const UserForm = (props) => {
   const submitHandler = (event) => {
     event.preventDefault();
 
-    if (userName === "" || userAge === "") {
+    if (userName.trim().length === 0 || userAge.trim().length === 0) {
       console.log("Please enter a valid name and age (non-empty values)");
-    } else if (userAge < 1) {
+    } else if (+userAge < 1) {
       console.log("Please enter a valid age (>0)");
     } else {
       const userData = {
